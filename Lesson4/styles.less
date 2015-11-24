@@ -1,0 +1,61 @@
+.keyframes (@name, @rules){
+@keyframes @name {
+	@rules()
+}
+@-moz-keyframes @name {
+	@rules()
+}
+@-webkit-keyframes @name {
+	@rules()
+}
+@-ms-keyframes @name {
+	@rules()
+}
+@-o-keyframes @name {
+	@rules()
+}
+}
+.icon() {
+	height: 64px;
+    width: 64px;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+}
+.load-status, .load-status2 {
+	.icon
+}
+.load-status {
+	background-image: url('images/712-1.gif');
+}
+.load-status2 {
+	background-image: url('images/712.gif');
+}
+.animation(@animation) {
+  animation: @animation 1s steps(12) infinite;
+  -webkit-animation: @animation 1s steps(12) infinite;
+  -moz-animation: @animation 1s steps(12) infinite;
+  -ms-animation: @animation 1s steps(12) infinite;
+  -o-animation: @animation 1s steps(12) infinite;
+}
+
+.loader{
+	.animation(rotade);
+}
+.loader2 {
+	.animation(play);
+}
+
+.animation-play { 
+      0% { background-position: 0px 0; } 
+    100% { background-position: -768px 0; }
+}
+.animation-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.keyframes(play, .animation-play);
+.keyframes(rotade, .animation-rotate);
