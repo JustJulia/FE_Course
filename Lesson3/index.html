@@ -170,7 +170,7 @@
 		<form role="form" action="">
 			 <div class="form-group">
 			 	  <label for="name">ФИО*</label>
-				  <input type="text" class="form-control" id="name" placeholder="ФИО*" required p>
+				  <input type="text" class="form-control" id="name" placeholder="ФИО*" required>
 				  
 			 </div>
 			 <div class="form-group">
@@ -194,7 +194,8 @@
 			 </div>
 			 <div class="form-group">
 				  <label for="date">Дата рождения</label>
-				  <input type="date" class="form-control" id="date" >
+				  <input type="date" class="form-control" id="date" max=????>
+				  <!--today-->
 
 			 </div>
 			 <div class="form-group">
@@ -203,8 +204,8 @@
 				  <label for="city-index">Индекс</label>
 				  <input type="text" class="form-control" id="city-index" placeholder="Индекс" pattern="[0-9]{5}">
 				  <label for="city-area">Область</label>
-				  <select class="form-control" id="city-area">
-					 <option>Винницкая область</option>
+				  <select class="form-control" id="city-area" name="...">
+					 <option value="...">Винницкая область</option>
 					 <option>Волынская область</option>
 					 <option>Днепропетровская область</option>
 					 <option>Донецкая область</option>
@@ -222,9 +223,10 @@
 
 			 <div class="form-group">
 			 <label for="checkbox">Ваши увлечения</label>
-			 <div class="checkbox" id="checkbox">
+			 <div class="checkbox">
+		 	<!--<div class="checkbox" id="checkbox">-->
 			 	
-			 	 <label><input type="checkbox">Музыка</label>
+			 	 <label><input type="checkbox" name="some_name" value="some_value">Музыка</label>
 			 	 <label><input type="checkbox">Спорт</label>
 			 	 <label><input type="checkbox">Книги</label>
 			 	 <label><input type="checkbox">Туризм</label>
