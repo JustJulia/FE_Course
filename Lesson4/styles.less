@@ -30,8 +30,8 @@
 .load-status2 {
 	background-image: url('images/712.gif');
 }
-.animation(@animation) {
-  animation: @animation 1s steps(12) infinite;
+.animation(@animation, @steps:12, @duration:1s) {
+  animation: @animation @duration steps(@steps) infinite;
   -webkit-animation: @animation 1s steps(12) infinite;
   -moz-animation: @animation 1s steps(12) infinite;
   -ms-animation: @animation 1s steps(12) infinite;
